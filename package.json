@@ -21,13 +21,15 @@
     "url": "https://github.com/ded/script.js.git"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tape test/*.js",
+    "prepublish": "cat script.js | uglifyjs -c -m --define DEBUG=false --comments /!/ > script.min.js"
   },
   "devDependencies": {
     "jquery": "3.1.1",
     "jsdom": "9.5.0",
     "jsdom-global": "2.1.0",
     "tape": "4.6.2",
-    "tape-around": "2.2.0"
+    "tape-around": "2.2.0",
+    "uglifyjs": "2.4.10"
   }
 }

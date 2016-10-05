@@ -1,3 +1,5 @@
+global.DEBUG = true
+
 require('jsdom-global')({
   FetchExternalResources: ['script'],
   ProcessExternalResources: ['script']

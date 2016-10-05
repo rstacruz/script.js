@@ -125,9 +125,7 @@
    * @private
    */
 
-  if (typeof process === 'undefined' ||
-    !process.env ||
-    process.env.NODE_ENV !== 'production') {
+  if (typeof DEBUG !== 'undefined' && DEBUG) {
     $script.reset = function () {
       scriptpath = undefined
       urlArgs = undefined
