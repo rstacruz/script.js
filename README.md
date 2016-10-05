@@ -1,8 +1,20 @@
-### $script.js - Async JavaScript loader & dependency manager
+# @rstacruz/scriptjs
 
-`$script.js` is an asynchronous JavaScript loader and dependency manager with an astonishingly impressive lightweight footprint. Like many other script loaders, $script.js allows you to load script resources on-demand from any URL and not block other resources from loading (like CSS and images). Furthermore, it's unique interface allows developers to work easily with even the most complicated dependencies, which can often be the case for large, complex web applications.
+> Async JavaScript loader & dependency manager
 
-### Browser Support
+`scriptjs` is an asynchronous JavaScript loader and dependency manager with an astonishingly impressive lightweight footprint. Like many other script loaders, $script.js allows you to load script resources on-demand from any URL and not block other resources from loading (like CSS and images). Furthermore, it's unique interface allows developers to work easily with even the most complicated dependencies, which can often be the case for large, complex web applications.
+
+## Fork information
+
+:warning: This is a fork by [@rstacruz](https://github.com/rstacruz) of script.js originally by [Dustin Diaz](http://github.com/ded), formerly in [ded/script.js](https://github.com/ded/script.js). This fork adds no functionality, but cleans up the code a bit.
+
+- Removes the smoosh-based build system
+- Replaces the browser tests with jsdom-based unit tests
+- Ender support is removed
+- Documentation is improved
+- Renamed from `$script.js` to the less-ambiguous `scriptjs`
+
+## Browser Support
 
   * IE 6+
   * Opera 10+
@@ -10,8 +22,7 @@
   * Chrome 1+
   * Firefox 2+
 
-### Examples
-
+## Examples
 
 old school - blocks CSS, Images, AND JS!
 
@@ -54,7 +65,7 @@ $script.ready('bundle', function() {
 })
 ```
 
-### Exhaustive list of ways to use $script.js
+## Exhaustive list of ways to use $script.js
 
 ``` js
 $script('foo.js', function() {
@@ -125,6 +136,8 @@ $script.ready('my-awesome-plugin', function() {
 })
 ```
 
+## API
+
 ### $script.path()
 
 Optionally to make working with large projects easier, there is a path variable you can set to set as a base.
@@ -158,36 +171,3 @@ $script.urlArgs('key=value&foo=bar');
 ```
 
 Please note that Squid, a popular proxy, doesn’t cache resources with a querystring. This hurts performance when multiple users behind a proxy cache request the same file – rather than using the cached version everybody would have to send a request to the origin server. So ideally, [as Steve Souders points out](http://www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/), you should rev the filename itself.
-
-### Developers
-
-Building a $script environment works like this:
-
-``` sh
-npm install -dev
-make
-```
-
-### Ender support
-
-You can add `$script` to your existing [ender](http://enderjs.com) build by adding it as such:
-
-``` sh
-ender add scriptjs
-```
-
-Get access to it as such:
-
-``` js
-$.require(...)
-```
-
-You can also require it as such:
-
-``` js
-var $S = require('scriptjs')
-
-$S('/foo.js', function () {
-  // foo is ready
-})
-```
