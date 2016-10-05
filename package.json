@@ -13,7 +13,8 @@
   "homepage": "https://github.com/ded/script.js",
   "author": "Dustin Diaz <dustin@dustindiaz.com> (http://dustindiaz.com)",
   "contributors": [
-    "Jacob Thornton <jacob@twitter.com> (https://github.com/fat)"
+    "Jacob Thornton <jacob@twitter.com> (https://github.com/fat)",
+    "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)"
   ],
   "main": "index.js",
   "repository": {
