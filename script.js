@@ -1,7 +1,7 @@
 /*!
-  * $script.js JS loader & dependency manager
-  * https://github.com/ded/script.js
-  * (c) Dustin Diaz 2014 | License MIT
+  * scriptjs JS loader & dependency manager
+  * https://github.com/rstacruz/scriptjs
+  * (c) Dustin Diaz 2014 | Rico Sta. Cruz 2016 | License MIT
   */
 
 (function (name, definition) {
