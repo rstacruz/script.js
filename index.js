@@ -55,11 +55,11 @@
     setTimeout(function () {
       each(paths, function loading(path, force) {
         if (path === null) return callback()
-        
+
         if (!force && !/^https?:\/\//.test(path) && scriptpath) {
           path = (path.indexOf('.js') === -1) ? scriptpath + path + '.js' : scriptpath + path;
         }
-        
+
         if (scripts[path]) {
           if (id) ids[id] = 1
           return (scripts[path] == 2) ? callback() : setTimeout(function () { loading(path, true) }, 0)
@@ -118,6 +118,24 @@
 
   $script.done = function (idOrDone) {
     $script([null], idOrDone)
+  }
+
+  /**
+   * Resets custom settings. Used for tests.
+   * @private
+   */
+
+  if (typeof process === 'undefined' ||
+    !process.env ||
+    process.env.NODE_ENV !== 'production') {
+    $script.reset = function () {
+      scriptpath = undefined
+      urlArgs = undefined
+      list = {}
+      ids = {}
+      delay = {}
+      scripts = {}
+    }
   }
 
   return $script
