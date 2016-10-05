@@ -120,5 +120,23 @@
     $script([null], idOrDone)
   }
 
+  /**
+   * Resets custom settings. Used for tests.
+   * @private
+   */
+
+  if (typeof process === 'undefined' ||
+    !process.env ||
+    process.env.NODE_ENV !== 'production') {
+    $script.reset = function () {
+      scriptpath = undefined
+      urlArgs = undefined
+      list = {}
+      ids = {}
+      delay = {}
+      scripts = {}
+    }
+  }
+
   return $script
 });
