@@ -1,8 +1,8 @@
-# @rstacruz/scriptjs
+# scriptjs
 
 > Async JavaScript loader & dependency manager
 
-`scriptjs` is an asynchronous JavaScript loader and dependency manager with an astonishingly impressive lightweight footprint. Like many other script loaders, $script.js allows you to load script resources on-demand from any URL and not block other resources from loading (like CSS and images). Furthermore, it's unique interface allows developers to work easily with even the most complicated dependencies, which can often be the case for large, complex web applications.
+`scriptjs` is an asynchronous JavaScript loader and dependency manager with an astonishingly impressive lightweight footprint. Like many other script loaders, scriptjs allows you to load script resources on-demand from any URL and not block other resources from loading (like CSS and images). Furthermore, it's unique interface allows developers to work easily with even the most complicated dependencies, which can often be the case for large, complex web applications.
 
 ## Fork information
 
@@ -16,16 +16,20 @@
 
 ## Installation
 
-scriptjs is available via npm as `@rstacruz/scriptjs`.
+scriptjs is available via npm as `@rstacruz/scriptjs`. It's then available as `require('@rstacruz/scriptjs')` for use in Webpack/Browserify/Brunch.
 
 ```
 npm install --save @rstacruz/scriptjs
 ```
 
-Standalone build:
+## Standalone builds
+
+Standalone builds are available here:
 
 - https://unpkg.com/@rstacruz/scriptjs/script.min.js (latest)
 - https://unpkg.com/@rstacruz/scriptjs@3.0.0/script.min.js (specific version)
+
+You can access it as `window.$script`.
 
 ## Browser Support
 
