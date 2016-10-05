@@ -24,7 +24,8 @@ npm install --save @rstacruz/scriptjs
 
 Standalone build:
 
-> [](#version) `https://cdn.rawgit.com/rstacruz/scriptjs/v3.0.0/script.min.js`
+- https://unpkg.com/@rstacruz/scriptjs/script.min.js (latest)
+- https://unpkg.com/@rstacruz/scriptjs@3.0.0/script.min.js (specific version)
 
 ## Browser Support
 
