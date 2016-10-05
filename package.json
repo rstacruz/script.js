@@ -31,5 +31,6 @@
     "tape": "4.6.2",
     "tape-around": "2.2.0",
     "uglifyjs": "2.4.10"
-  }
+  },
+  "license": "MIT"
 }
