@@ -15,8 +15,7 @@
   "contributors": [
     "Jacob Thornton <jacob@twitter.com> (https://github.com/fat)"
   ],
-  "main": "./dist/script.js",
-  "ender": "./src/ender.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ded/script.js.git"

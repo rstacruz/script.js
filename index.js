@@ -1,3 +1,9 @@
+/*!
+  * $script.js JS loader & dependency manager
+  * https://github.com/ded/script.js
+  * (c) Dustin Diaz 2014 | License MIT
+  */
+
 (function (name, definition) {
   if (typeof module != 'undefined' && module.exports) module.exports = definition()
   else if (typeof define == 'function' && define.amd) define(definition)
@@ -49,11 +55,11 @@
     setTimeout(function () {
       each(paths, function loading(path, force) {
         if (path === null) return callback()
-        
+
         if (!force && !/^https?:\/\//.test(path) && scriptpath) {
           path = (path.indexOf('.js') === -1) ? scriptpath + path + '.js' : scriptpath + path;
         }
-        
+
         if (scripts[path]) {
           if (id) ids[id] = 1
           return (scripts[path] == 2) ? callback() : setTimeout(function () { loading(path, true) }, 0)
