@@ -14,6 +14,18 @@
 - Documentation is improved
 - Renamed from `$script.js` to the less-ambiguous `scriptjs`
 
+## Installation
+
+scriptjs is available via npm as `@rstacruz/scriptjs`.
+
+```
+npm install --save @rstacruz/scriptjs
+```
+
+Standalone build:
+
+> [](#version) `https://cdn.rawgit.com/rstacruz/scriptjs/v3.0.0/script.min.js`
+
 ## Browser Support
 
   * IE 6+
