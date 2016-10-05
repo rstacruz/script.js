@@ -57,7 +57,7 @@
         if (path === null) return callback()
 
         if (!force && !/^https?:\/\//.test(path) && scriptpath) {
-          path = (path.indexOf('.js') === -1) ? scriptpath + path + '.js' : scriptpath + path;
+          path = (path.indexOf('.js') === -1) ? scriptpath + path + '.js' : scriptpath + path
         }
 
         if (scripts[path]) {
@@ -76,14 +76,14 @@
   function create(path, fn) {
     var el = doc.createElement('script'), loaded
     el.onload = el.onerror = el[onreadystatechange] = function () {
-      if ((el[readyState] && !(/^c|loade/.test(el[readyState]))) || loaded) return;
+      if ((el[readyState] && !(/^c|loade/.test(el[readyState]))) || loaded) return
       el.onload = el[onreadystatechange] = null
       loaded = 1
       scripts[path] = 2
       fn()
     }
     el.async = 1
-    el.src = urlArgs ? path + (path.indexOf('?') === -1 ? '?' : '&') + urlArgs : path;
+    el.src = urlArgs ? path + (path.indexOf('?') === -1 ? '?' : '&') + urlArgs : path
     head.insertBefore(el, head.lastChild)
   }
 
@@ -100,13 +100,13 @@
     scriptpath = p
   }
   $script.urlArgs = function (str) {
-    urlArgs = str;
+    urlArgs = str
   }
   $script.ready = function (deps, ready, req) {
     deps = deps[push] ? deps : [deps]
-    var missing = [];
+    var missing = []
     !each(deps, function (dep) {
-      list[dep] || missing[push](dep);
+      list[dep] || missing[push](dep)
     }) && every(deps, function (dep) {return list[dep]}) ?
       ready() : !function (key) {
       delay[key] = delay[key] || []
@@ -137,4 +137,4 @@
   }
 
   return $script
-});
+})
