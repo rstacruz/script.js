@@ -26,8 +26,8 @@ npm install --save @rstacruz/scriptjs
 
 Standalone builds are available here:
 
-- https://unpkg.com/@rstacruz/scriptjs/script.min.js (latest)
-- https://unpkg.com/@rstacruz/scriptjs@3.0.0/script.min.js (specific version)
+- <https://unpkg.com/@rstacruz/scriptjs/script.min.js> (latest)
+- <https://unpkg.com/@rstacruz/scriptjs@3.0.0/script.min.js> (specific version)
 
 You can access it as `window.$script`.
 
