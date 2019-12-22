@@ -16,7 +16,7 @@
     "Jacob Thornton <jacob@twitter.com> (https://github.com/fat)",
     "Rico Sta. Cruz <rico@ricostacruz.com> (http://ricostacruz.com)"
   ],
-  "main": "index.js",
+  "main": "script.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rstacruz/scriptjs.git"
